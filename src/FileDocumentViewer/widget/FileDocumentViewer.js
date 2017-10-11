@@ -114,7 +114,7 @@ require( [
             if (this._contextObj === null || this._contextObj.get('Name') === null) {
                 url = require.toUrl('FileDocumentViewer/widget/ui/error.html');
             } else {
-                url = 'file?target=window&guid=' + this._contextObj.getGuid() + '&csrfToken=' + mx.session.getCSRFToken() + '&time=' + Date.now();
+                url = 'file?target=window&guid=' + this._contextObj.getGuid() + '&csrfToken=' + mx.session.sessionData.csrftoken + '&time=' + Date.now();
             }
             return url;
         },
